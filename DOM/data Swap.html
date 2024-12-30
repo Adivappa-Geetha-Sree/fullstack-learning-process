@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Swap data</title>
+        <style>
+            *{
+                padding: 0px;
+                margin: 0px;
+            }
+            .main{
+                width: 600px;
+                height: 150px;
+                margin: 10px auto;
+                border: 1px solid red;
+                display: flex;
+                box-sizing: border-box;
+                text-align: center;
+            }
+            .row{
+                border: 1px solid red;
+                flex-basis: 50%;
+                padding: 10px;
+            }
+            .button{
+                width: 150px;
+                font-size: 20px;
+                margin:20px 510px;
+                border: 1px solid black;
+                background-color: cornflowerblue;
+                color: aliceblue;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="main">
+            <div class="row" id="row1">
+                <h3>Expert Mentorship</h3>
+                <p>Our team of seasoned professionals serves as your mentors throughout the full stack developer course. You'll benefit from their insights,
+                    advice, and mentorship, providing a supportive learning environment</p>
+            </div>
+            <div class="row" id="row2">
+                <h3>Recognized Certification</h3>
+                <p>Our team of seasoned professionals serves as your mentors throughout the full stack developer course. You'll benefit from their insights,
+                    advice, and mentorship, providing a supportive learning environment</p>
+            </div>
+        </div>
+        <button class="button" id="button" onclick="swap()"> On Click</button>
+
+    </body>
+    <script>
+        function swap( ) {
+            var row1 = document.getElementById('row1').innerHTML
+            var row2 = document.getElementById('row2').innerHTML
+
+            document.getElementById('row1').innerHTML=row2
+            document.getElementById('row2').innerHTML=row1
+        }
+
+    </script>
+</html>

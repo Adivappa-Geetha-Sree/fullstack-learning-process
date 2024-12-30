@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>On Scroll Show Or hide Button</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            *{
+                text-decoration: none;
+                padding: 0px;
+                margin: 0px;
+            }
+            html{
+                scroll-behavior: smooth;
+            }
+            .section1{
+                width: 100%;
+                height: 100vh;
+                background-color: black;
+            }
+            .section2{
+                width: 100%;
+                height: 100vh;
+                background-color: red
+            }
+            .section3{
+                width: 100%;
+                height: 100vh;
+                background-color: blue;
+            }
+            #arrow{
+                width: 60px;
+                height: 60px;
+                text-align: center;
+                box-sizing: border-box;
+                position: sticky;
+                bottom: 40px;
+                left:100%;
+                color: black;
+                font-size: 50px;
+                background-color: cadetblue;
+                border-radius: 50%;
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="section1" id="section1"></div>
+        <div class="section2" id="section2"></div>
+        <div class="section3" id="section3"></div>
+        <a href="#section1"><i class="fa-solid fa-arrow-up" id="arrow"></i></a>
+    </body>
+
+    <script>
+        let arrow = document.getElementById('arrow')
+        window.addEventListener('scroll',() => {
+            if(window.scrollY > 100){
+                arrow.style.display="block"
+            }
+            else{
+                arrow.style.display="none"
+            }
+        })
+    </script>
+</html>

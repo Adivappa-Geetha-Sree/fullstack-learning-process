@@ -1,0 +1,44 @@
+<html>
+    <title>FLASH Intervel Counter</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        .main{
+            margin: auto;
+        }
+    </style>
+    <body>
+        <div class="main">
+            <div> Sale ends in 25 December 2024 10:00 PM</div>
+            <input type="text">
+            <!-- <input type="datetime-local" id="local"> -->
+            <button id="btn" onclick="clock">btn</button>
+        </div>
+    </body>
+    <script>
+        var btn = document.getElementById('btn')
+        var input = document.querySelector('input type=text')
+        const endDate = "27 August 2025 08:20:00 PM"
+        function clock(){ 
+            const end = new Date(endDate)
+            let now = new Date()
+            
+            const diff = (end - now) / 1000;
+
+
+            if (diff < 0) return;
+            // var
+            // convert into days;
+            let days  = Math.floor(diff / 3600 / 24);
+            let  hours = Math.floor(diff / 3600) % 24;
+            let minuts = Math.floor(diff / 60) % 60;
+            let  seconds = Math.floor(diff) % 60;
+            input.value = days+'  Days  '+hours+'  Hours  '+minuts+'  Minuts  '+seconds+'  Seconds  '
+            console.log(input.value)
+        }
+
+        setInterval(clock,1000)
+    </script>
+</html>

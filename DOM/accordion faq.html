@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <title>Accordion Faqs</title>
+        <style>
+            *{
+                padding: 0px;
+                margin: 0px;
+            }
+            .faqList{
+                width: 100px;
+                margin:  10px auto;
+                margin-top: 30px;
+            }
+            .faq{
+                width: 100%;
+                text-align: left;
+                box-shadow: 0px 2px 5px gray;
+            }
+            .faqQues{
+                margin: 3px;
+                padding: 3px 5px;
+                font-size: 30px;
+                display: flex;
+                font-weight: bolder;
+                background-color: mediumslateblue;
+                justify-content: space-between;
+            }
+            .faqQues span{
+                font-size: 40px;
+            }
+            .faqAns{
+                margin: 1px 3px;
+                padding: 3px 5px;
+                background-color: cornflowerblue;
+            }
+            .hide{
+                display: none;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="faqlList">
+            <div class="faq">
+                <div class="faqQues">
+                    <p>What is Lorem Ipsum?</p>
+                    <span>+</span>
+                </div>
+                <div class="faqAns hide">
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+                        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>
+                </div>
+            </div>
+            <div class="faq">
+                <div class="faqQues">
+                    <p>What is Lorem Ipsum?</p>
+                    <span>+</span>
+                </div>
+                <div class="faqAns hide">
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+                        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>
+                </div>
+            </div>
+            <div class="faq">
+                <div class="faqQues">
+                    <p>What is Lorem Ipsum?</p>
+                    <span>+</span>
+                </div>
+                <div class="faqAns hide">
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+                        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>
+                </div>
+            </div>
+            <div class="faq">
+                <div class="faqQues">
+                    <p>What is Lorem Ipsum?</p>
+                    <span>+</span>
+                </div>
+                <div class="faqAns hide">
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+                        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        var ques = document.querySelectorAll(".faqQues");
+
+        ques.forEach((value,index)=>{
+            value.addEventListener('click', (event) =>{
+                var ans = document.querySelectorAll('.faqAns')
+                
+                ques.forEach((e,i)=>{
+                    e.nextElementSibling.classList.toggle('hide')
+                    if(i !=index){
+                        e.nextElementSibling.classList.add('hide')
+                        e.children[1].innerHTML='+'
+                        
+                    }
+                    else{
+                        ans[i].classList.remove('hide')
+                        e.children[1].innerHTML='-'
+                    }
+                })
+                value.classList.toggle
+                
+            })
+        })
+    </script>
+</html>
+

@@ -1,0 +1,124 @@
+<html>
+    <head>
+        <title>jquary Accordation</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" ></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <style>
+            *{
+                padding: 0px;
+                margin: 0px;
+                box-sizing: border-box;
+            }
+            body{
+                   background-color: #4158D0;
+                background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+            }
+            header{
+                width: 50%;
+                text-align: center;
+                margin: 20px auto;
+                text-shadow: 12px 15px 5px gray;
+            }
+            .main{
+                width: 80%;
+                margin: 25px auto;
+                
+            }
+            .row{
+                width: 80%;
+                margin: 25px 0px;
+            }
+            .row h2{
+                display: inline;
+                background-color: yellow;
+                color: black;
+                font-weight: bold;
+                padding: 10px;
+                margin: 5px auto;
+            }
+            .row h2 i{
+                margin-left: 530px;
+            }
+            .row p{
+                margin: 10px auto;
+                padding: 19px 5px;
+                font-size: 18px;
+                display: none;
+                background-color: aliceblue;
+            }
+            .active{
+                display: block !important;
+
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>
+                Jquery Accordation
+            </h1>
+        </header>
+        <div class="main">
+           
+            <div class="row">
+                <h2>
+                    What is Full Stack Web Development?
+                    <i class="fa-solid fa-plus"></i>
+                </h2>
+                <p>
+                    "Full Stack Developers have a comprehensive understanding of the entire development process. This versatility allows them to contribute to various stages of a project, leading to efficient collaboration and quicker problem-solving."
+                </p>
+            </div>
+            <div class="row">
+                <h2>
+                    What is Full Stack Web Development?
+                    <i class="fa-solid fa-plus"></i>
+                </h2>
+                <p>
+                    "Full Stack Developers have a comprehensive understanding of the entire development process. This versatility allows them to contribute to various stages of a project, leading to efficient collaboration and quicker problem-solving."
+                </p>
+            </div>
+            <div class="row">
+                <h2>
+                    What is Full Stack Web Development?
+                    <i class="fa-solid fa-plus"></i>
+                </h2>
+                <p>
+                    "Full Stack Developers have a comprehensive understanding of the entire development process. This versatility allows them to contribute to various stages of a project, leading to efficient collaboration and quicker problem-solving."
+                </p>
+            </div>
+            <div class="row">
+                <h2>
+                    What is Full Stack Web Development?
+                    <i class="fa-solid fa-plus"></i>
+                </h2>
+                <p>
+                    "Full Stack Developers have a comprehensive understanding of the entire development process. This versatility allows them to contribute to various stages of a project, leading to efficient collaboration and quicker problem-solving."
+                </p>
+            </div>
+            <div class="row">
+                <h2>
+                    What is Full Stack Web Development?
+                    <i class="fa-solid fa-plus"></i>
+                </h2>
+                <p>
+                    "Full Stack Developers have a comprehensive understanding of the entire development process. This versatility allows them to contribute to various stages of a project, leading to efficient collaboration and quicker problem-solving."
+                </p>
+            </div>
+
+        </div>
+    </body>
+    <script>
+
+        $(document).ready(function(){
+            $('.row h2').click(function(){
+                $(this).siblings("p").toggleClass('active');
+                $(this).find("i").toggleClass("fa-plus fa-minus");
+                $('.row h2').not(this).each(function(){
+                    $(this).siblings("p").removeClass("active")
+                    $(this).find("i").addClass("fa-plus").removeClass('fa-minus')
+                })
+            })
+        })
+    </script>
+</html>

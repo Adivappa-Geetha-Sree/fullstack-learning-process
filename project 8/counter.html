@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>SALE COUNTDOWN</title>
+        <style>
+            *{
+                padding: 0px;
+                margin: 0px;
+            }
+            .main{
+                background-image: url(https://wscubetech.co/Assignments/Project-06/image/1802071.webp);
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-blend-mode: hard-light;
+                width: 100%;
+                height: 100vh;
+            }
+            .block{
+                width: 70%;
+                margin: auto;
+                color: white;        
+            }
+            .block h1{
+                padding: 15px;  
+                line-height: 50px; 
+                word-spacing: 20px; 
+                letter-spacing: 3px;
+            }
+            .counter{
+                padding: 10px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            .input{
+                display: flex;
+                flex-flow: column;
+            }
+            .input input{
+                color: black;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <div class="block">
+                <div>
+                    <h1>WE ARE COMING SOON.....<br/>26 JULY 2025 08:20:00 PM</h1>
+                </div>
+                <div class="counter">
+                    <div class="input">
+                        <input type="number" name="number">
+                        <div><p>DAYS</p></div>
+                    </div>
+                    <div class="input">
+                        <input type="number" name="number">
+                        <div><p>HOURS</p></div>
+                    </div>
+                    <div class="input">
+                        <input type="number" name="number">
+                        <div><p>MINUTS</p></div>
+                    </div>
+                    <div class="input">
+                        <input type="number" name="number">
+                        <div><p>SECONDS</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        var endate = new Date('26 JULY 2025 08:20:00 PM').getTime()
+        var input = document.querySelectorAll('input')
+
+        function count(){
+            var today = new Date().getTime()
+            var diff =Number((endate-today)/1000)
+            input[0].value= Math.floor(diff/(3600*24))
+            input[1].value= Math.floor(diff/(3600)%24)
+            input[2].value= Math.floor(diff/(60)%60)
+            input[3].value= Math.floor(diff%60)
+        }
+        setInterval(count,1000)
+    </script>
+</html>

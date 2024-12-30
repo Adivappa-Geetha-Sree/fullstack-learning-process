@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Fancybox</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4/dist/fancybox.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            margin: 20px 0;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(150px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .gallery a {
+            display: block;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .gallery img {
+            width: 100%;
+            display: block;
+            /* transition: transform 0.3s ease; */
+        }
+        /* .gallery img:hover {
+            transform: scale(1.05);
+        } */
+    </style>
+</head>
+<body>
+    <h1>jQuery Fancybox</h1>
+    <div class="gallery">
+        <a href="images/fancybox (1).jpg" data-fancybox="gallery">
+            <img src="images/fancybox (1).jpg" alt="Image 1">
+        </a>
+        <a href="images/fancybox (2).jpg" data-fancybox="gallery">
+            <img src="images/fancybox (2).jpg" alt="Image 2">
+        </a>
+        <a href="images/fancybox (3).jpg" data-fancybox="gallery">
+            <img src="images/fancybox (3).jpg" alt="Image 3">
+        </a>
+        <a href="images/fancybox (4).jpg" data-fancybox="gallery">
+            <img src="images/fancybox (4).jpg" alt="Image 3">
+        </a>
+        <a href="images/fancybox (5).jpg" data-fancybox="gallery">
+            <img src="images/fancybox (5).jpg" alt="Image 3">
+        </a>
+        <a href="images/fancybox (6).jpg" data-fancybox="gallery">
+            <img src="images/fancybox (6).jpg" alt="Image 3">
+        </a>
+        <a href="images/fancybox (7).jpg" data-fancybox="gallery">
+            <img src="images/fancybox (7).jpg" alt="Image 3">
+        </a>
+        <a href="images/fancybox (8).jpg" data-fancybox="gallery">
+            <img src="images/fancybox (8).jpg" alt="Image 3">
+        </a>
+        <a href="images/fancybox (9).jpg" data-fancybox="gallery">
+            <img src="images/fancybox (9).jpg" alt="Image 3">
+        </a>
+        <a href="images/fancybox (10).jpg" data-fancybox="gallery">
+            <img src="images/fancybox (10).jpg" alt="Image 3">
+        </a>
+        <a href="images/fancybox (11).jpg" data-fancybox="gallery">
+            <img src="images/fancybox (11).jpg" alt="Image 3">
+        </a>
+        <a href="images/fancybox (12).jpg" data-fancybox="gallery">
+            <img src="images/fancybox (12).jpg" alt="Image 3">
+        </a>
+        
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4/dist/fancybox.umd.js"></script>
+</body>
+</html>

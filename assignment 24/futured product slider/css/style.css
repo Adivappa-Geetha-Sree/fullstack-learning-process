@@ -1,0 +1,44 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+header{
+    width: 50%;
+    text-align: center;
+    margin: 10px auto;
+}
+.main{
+    width: 96%;
+    margin: 15px auto;
+}
+.owl-nav{
+    position: relative;
+    top: 0px;
+    right: 0px;
+}
+.owl-prev span{
+    font-size: 50px;
+    color: black;
+    padding: 15px;
+    background: white;
+    border-radius: 50%;
+}
+.owl-prev{
+    position: absolute;
+    top: -206px;
+    left: -0%;
+}
+.owl-next span{
+    font-size: 50px;
+    color: black;
+    padding: 15px;
+    background: white;
+    border-radius: 50%;
+}
+.owl-next{
+    position: absolute;
+    top: -206px;
+    right: -0%;
+    font-size: 24px;
+}

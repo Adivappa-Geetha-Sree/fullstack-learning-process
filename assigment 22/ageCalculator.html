@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <title>Date Difference CAL</title>
+        <style>
+            *{
+                padding: 0px;
+                margin: 0px;
+            }
+            .main{
+                width: 800px;
+                margin: auto;
+                padding: 20px;
+                text-align: center;
+            }
+            .main label{
+                display: block;
+            }
+            .main input{
+                margin: 5px 0px;
+            }
+            .main button{
+                margin-top: 10px;
+                width: 20%;
+                margin: auto;
+                padding: 5px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <h5>Date Difference CAlculator</h5>
+            <div>
+                <label>DATES OF BIRTH</label>
+                <input type="datetime-local" id="fromDate">
+            </div>
+            <!-- <div>
+                <label>TO DATES</label>
+                <input type="datetime-local" id="toDate">
+            </div> -->
+            <button id="btn">Calculate</button>
+            <div>
+                <label>years</label>
+                <input type="text" id="years">
+            </div>
+            <div>
+                <label>Month</label>
+                <input type="text" id="month">
+            </div>
+            <div>
+                <label>days</label>
+                <input type="text" id="days">
+            </div>
+            <div>
+                <label>hours</label>
+                <input type="text" id="hrs">
+            </div>
+            <div>
+                <label>minuts</label>
+                <input type="text" id="mins">
+            </div>
+            <div>
+                <label>seconds</label>
+                <input type="text" id="sec">
+            </div>
+        </div>
+        
+    </body>
+    <script>
+        let fromdate = document.getElementById('fromDate')
+        // let todate = document.getElementById('toDate')
+        let years = document.getElementById('years')
+        let month = document.getElementById('month')
+        let days = document.getElementById('days')
+        let hours = document.getElementById('hrs')
+        let minutes = document.getElementById('mins')
+        let seconds = document.getElementById('sec')
+        let btn = document.getElementById('btn')
+        btn.addEventListener('click', ()=>{
+            let from = new Date(fromdate.value).getTime()
+            let to = new Date().getTime()
+            let difference = (to - from) /1000;
+
+            let year =Math.floor(difference/3600/24/365.25)
+            years.value =year
+            console.log((difference/60/60/24/365.25/year))
+            month.value = Math.floor((difference/60/60/24/30.44)-(12*year))
+            days.value =Math.floor(difference/3600/24%30.44)
+            hours.value = Math.floor(difference/3600)%24
+            minutes.value =Math.floor(difference/ 60)%60
+            seconds.value =Math.floor(difference%60)
+        })
+    </script>
+</html>

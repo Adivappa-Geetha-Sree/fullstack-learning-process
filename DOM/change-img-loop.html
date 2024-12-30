@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Change image loop</title>
+        <style>
+            .mian{
+                width: 1000px;
+                height: 600px;
+                border: 1px solid black;
+                margin: auto;
+                display: flex;
+                gap: 20px;
+                justify-content: center;
+                align-items: center;
+                box-sizing: border-box;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="mian">
+            <button class="left" id="slideLeft"> left </button>
+            <img src="images/1.jpg" id="image"/>
+            <button class="right" id="slideRight"> right </button>
+        </div>
+
+    </body>
+    <script>
+        var scrolll = [ "images/1.jpg","images/2.jpg","images/3.jpg","images/4.jpg","images/5.jpg"]
+        var i = 0
+        var count =0
+        function clickLeft(){
+            var img = document.getElementById('image')
+            i--;
+            if(i<0){
+                i=scrolll.length-1;
+            }
+            img.src =scrolll[i]
+
+            
+        }
+        function clickRight(){
+            var img = document.getElementById('image')
+            i++;
+            if(i>scrolll.length-1){
+                i=0;
+            }
+            img.src =scrolll[i]
+
+            
+        }
+        document.getElementById('slideLeft').addEventListener('click', clickLeft)
+        document.getElementById('slideRight').addEventListener('click', clickRight)
+    </script>
+</html>

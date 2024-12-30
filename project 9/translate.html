@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>translation</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+
+    </body>
+    <script>
+        let translate = async () => {
+            let link = await fetch(`https://libretranslate.com/translate`)
+            let set = await link.json()
+
+            console.log(set)
+        }
+
+        translate()
+    </script>
+</html>

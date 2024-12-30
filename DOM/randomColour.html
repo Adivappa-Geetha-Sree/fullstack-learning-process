@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Random Colour</title>
+        <style>
+            *{
+                background-color: rgb(10px,200px, 100px);
+            }
+        </style>
+    </head>
+    <body>
+
+    </body>
+    <script>
+        var body = document.body
+
+        body.addEventListener('click',() => {
+            let red = Math.floor(Math.random()*225)
+            let green = Math.floor(Math.random()*225)
+            let blue = Math.floor(Math.random()*225)
+
+            body.style.backgroundColor = `rgb(${red},${green},${blue})`
+        })
+        console.log(bg)
+    </script>
+</html>

@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>BUlb With 2 Switches</title>
+        <style>
+            *{
+                margin: auto;
+                padding: 0px;
+            }
+            .btn{
+                margin: 20px;
+            }
+           
+        </style>
+    </head>
+    <body>
+        <div class="main" >
+            <button class="btn" id="btn1" onclick="bulbon()">ON</button>
+            <img src="images/multi_bulb_off.jpg"id='img' width="114px"; height="125px";>
+            <button class="btn" id="btn2" onclick="bulboff()">OFF</button>
+        </div>
+    </body>
+    <script>
+        var btn1=document.getElementById('btn1')
+        var btn2=document.getElementById('btn2')
+        var img =document.getElementById('img')
+        function bulbon(){
+            img.src="images/multi_bulb_on.jpg"
+        }
+        function bulboff(){
+            img.src="images/multi_bulb_off.jpg"
+        }
+    </script>
+</html>

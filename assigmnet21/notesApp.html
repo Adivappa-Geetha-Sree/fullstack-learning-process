@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <title>Note App</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            *{
+                padding: 0px;
+                margin: 0px;
+            }
+            body{
+                background-color: aquamarine;
+            }
+            .add{
+                text-align: right;
+                width: 90%;
+                margin: auto;
+                padding: 20px;
+                /* border: 1px solid red; */
+            }
+            .btn{
+                padding: 10px;
+                border: none;
+                border-radius:5px;
+                color: white;
+                background-color: black;
+            }
+            .btn span{
+                font-size: 20px;
+            }
+            .Note{
+                width: 90%;
+                margin: 10px auto;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                align-items: center;
+            }
+            .notebox{
+                flex-basis: 32%;
+                height: 200px;
+                border: 1px solid gray;
+                background-color: white;
+
+            }
+            .headding{
+                color: white;
+                background-color: black;
+                text-align: right;
+                padding: 10px;
+            }
+            textarea{
+                margin: 2px;
+                width: 98%;
+                height: 80%;
+                border: none;
+                resize: none;
+                padding: 2px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="add">
+            <button class="btn"><span>+ </span>Add Note</button>
+        </div>
+        <div class="Note">
+            <!-- <div class="notebox">
+                <div class="headding">
+                    <i class="fa-solid fa-trash"></i>
+                </div>
+                <div>
+                    <textarea></textarea>
+                </div>
+            </div> -->
+        </div>
+    </body>
+    <script>
+        var Note = document.querySelector('.Note')
+        var btn = document.querySelector('.btn')
+        Note.innerHTML =``
+        btn.addEventListener('click', () =>{
+            Note.innerHTML+=`<div class="notebox">
+                <div class="headding">
+                    <i class="fa-solid fa-trash" id="del"></i>
+                </div>
+                <div>
+                    <textarea></textarea>
+                </div>
+            </div>`
+
+            var del =  document.querySelectorAll('#del')
+            del.forEach((value,index) =>{
+                value.addEventListener('click',() =>{
+                    value.parentElement.parentElement.remove()
+                })
+            })
+        })
+        
+    </script>
+</html>

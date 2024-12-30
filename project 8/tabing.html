@@ -1,0 +1,157 @@
+<html>
+    <head>
+        <title>MINI E-COMMERCE APP</title>
+        <style>
+            *{
+                padding: 0px;
+                margin: 0px;
+                text-decoration: none;
+                list-style: none;
+                /* border: 1px solid red; */
+                box-sizing: border-box;
+            }
+            body{
+                width: 100%;
+                background-color: aqua;
+            }
+            .main{
+                width: 98%;
+                margin: 10px auto;
+                
+            }
+            .block{
+                width: 95%;
+                margin: 10px auto;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .category{
+                flex-basis: 18%;
+                background-color: white;
+                /* margin-top: 5px; */
+                padding: 0px 15px;
+            }
+
+            li{
+                padding: 10px 0px;
+                font-size: 24px;
+            }
+            .products{
+                flex-basis: 80%;
+                
+            }
+            .items{
+                flex-basis: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+            .box{
+                background-color: aliceblue;
+                flex-basis: 24%;
+                text-align: center;
+                padding:5px;
+                margin: 5px 0px;
+            } 
+            #img{
+                width: 100%;
+            }
+            .details{
+                background-color: white;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <div class="block">
+                <div class="category">
+                    <h1>category</h1>
+                    <ul >
+                        
+                        
+                    </ul>
+                </div>
+                <div class="products">
+                    <h1>Products</h1>
+                    <div class="items" id="item">
+                        <div class="box">
+                            <div><img src="" alt="img" id="img"></div>
+                            <div class="details">
+                                <h3> iPhone 9 | Rs 549</h3>
+                                <h4> Brand - Apple</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </body>
+    <script>
+        let catList = document.querySelector('.category ul')
+        let productsData = document.querySelector('#item')
+        
+        let getCategory = async()=>{
+            catList.innerHTML='';
+            let catData = await fetch('https://dummyjson.com/products/categories')
+            let finalRes = await catData.json();
+
+            finalRes.forEach((element,index) => {
+                catList.innerHTML += `<li onclick="getProducts('${element.name}')">${element.name}</li>`
+            });
+            console.log(finalRes);
+        }
+        let apiurl='';
+        let getProducts = async (catname ='')=>{
+            productsData.innerHTML='';
+
+
+            if(catname===''){
+                apiurl = `https://dummyjson.com/products`
+                let fetchitems = await fetch(apiurl)
+                let list = await fetchitems.json()
+                let {products} = list
+                products.forEach((items,number) =>{
+                    productsData.innerHTML +=`<div class="box">
+                                <div><img src="${items.thumbnail}" alt="img" id="img"></div>
+                                <div class="details">
+                                    <h3> ${items.title} | Rs ${items.price}</h3>
+                                    <h4> ${items.brand}</h4>
+                                </div>
+                            </div> `;
+                })
+
+            }
+            else{
+                apiurl =`https://dummyjson.com/products/category/${catname}`
+
+
+                let fetchitems = await fetch(apiurl)
+                let list = await fetchitems.json()
+                let {products} = list
+                products.forEach((items,number) =>{
+                    productsData.innerHTML +=`<div class="box">
+                                <div><img src="${items.thumbnail}" alt="img" id="img"></div>
+                                <div class="details">
+                                    <h3> ${items.title} | Rs ${items.price}</h3>
+                                    <h4> ${items.brand}</h4>
+                                </div>
+                            </div> `;
+                })
+             
+            }
+
+
+        }
+    
+
+        getProducts()
+        getCategory()
+        
+    </script>
+</html>

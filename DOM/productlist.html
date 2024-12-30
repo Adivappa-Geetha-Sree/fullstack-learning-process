@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>ProductList</title>
+        <style>
+            *{
+                padding: 0px;
+                margin: 0px;
+            }
+            .main{
+                width: 1000px;
+                height: 700px;
+                margin: 30px auto;
+                border: 1px solid navy;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <div><img src="images/5.jpg"></div>
+            <div>
+                <button id="plus" onclick="increase()" style="display:inline">+</button>
+                <button id="num">0</button>
+                <button id="minus" onclick="decrease()">-</button>
+            </div>
+        </div>
+    </body>
+    <script>
+        var i = document.querySelector('#num')
+        var plus = document.querySelector('#plus')
+        var minus = document.querySelector('#minus')
+        function increase(){
+            minus.disabled = false;
+            let num = Number(i.innerText);
+            if(num<5){
+                i.innerText = num+1
+            }
+            else{
+                plus.disabled = true;
+            }
+        }
+        function decrease(){
+            plus.disabled = false;
+            let num = Number(i.innerText);
+            if(num>0){
+                i.innerText = num-1
+            }
+            else{
+                minus.disabled = true;
+            }
+        }
+
+    </script>
+</html>

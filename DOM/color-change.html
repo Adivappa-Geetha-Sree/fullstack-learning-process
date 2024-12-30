@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Colour change</title>
+    </head>
+    <style>
+        .main{
+            width: 500px;
+            height: 500px;
+            margin: 20px auto;
+            border: 1px solid black;
+            border-radius: 15px;
+            background-color: white;
+        }
+        input{
+            margin: 5px 680px;
+        }
+        button{
+            margin: 5px 680px;
+        }
+    </style>
+    <body>
+        <div class="main" id="Main"></div>
+        <div>
+            <input type="text" name="color" id="color"/>
+            <button onclick="colour()">Change the color</button>
+        </div>
+    </body>
+    <script>
+        var block= document.getElementById('Main');
+        var color = document.getElementById('color')
+        // var text = color.value
+        // var color=block.backgroundColor;
+        function colour(){
+            var text = color.value
+            if(text ==''){
+                block.style.backgroundColor = 'black'
+            }
+            else{
+                block.style.backgroundColor = text
+            }
+        }
+    </script>
+</html>

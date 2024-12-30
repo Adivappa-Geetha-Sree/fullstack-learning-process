@@ -1,0 +1,198 @@
+<html>
+    <head>
+        <title>WEATHER APP</title>
+        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css">
+        <style>
+            *{
+                padding: 0px;
+                margin: 0px;
+            }
+            body{
+                background-color: #9bcdd9;
+                height: 100vh;
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                justify-content: center;
+            }
+            h3{
+                padding: 10px 0px;
+                letter-spacing: 2px;
+                font-size: 2.5rem;
+                color: #0e2954;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .main{
+                width: 350px;
+                background-color: rgba(255, 255, 255, 0.4);
+                backdrop-filter: blur(10px);
+                border-radius: 25px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                box-shadow: 6px 6px 0 3px #0E2954;
+                overflow: hidden;
+                position: relative;
+                transition: 0.8s ease-in-out;
+            }
+            .design{
+                content: "";
+                width: 500px;
+                height: 500px;
+                display: none;
+                transform: scale(0, 0);
+                opacity: 0;
+                position: absolute;
+                top: 30%;
+                background: linear-gradient(#0352978c, rgba(255, 255, 255, 0.562));
+                border-radius: 50%;
+                transition: 1s ease-in-out;
+                animation-delay: 0.5s;
+            }
+            .fadeIn{
+                display: block !important;
+               
+            }
+            .invalid{
+                position: absolute;
+                top: 63%;
+                font-family: arial;
+                font-size: 20px;
+                text-transform: capitalize;
+                letter-spacing: 2px;
+                z-index: 77;
+            }
+            #input{
+                margin: 15px;
+                padding: 15px 30px;
+                border-radius: 10px;
+                border: none;
+                text-align: center;  
+            }
+            button{
+                border-radius: 10px;
+                border: none;
+                text-align: center;
+            }
+            #btn{
+                margin: 15px;
+            }   
+            .responce{
+                width: 100%;
+                margin: 15px;
+                text-align: center;
+                display: block;
+                color: white;
+            }
+            .degee{
+                padding: 5px;
+                margin: 15px;
+                font-size: 40px;
+                text-shadow:1px 1px 3px  black ;
+            }
+            mark{
+                background-color: #C3E1E8;
+                color: white;
+            }
+            .row{
+                width: 60%;
+                margin: 20px auto auto auto;
+                display: flex;
+                font-size: 20px;
+                font-weight: bold;
+                justify-content: space-between;
+            }
+            .col{
+                display: flex;
+                flex-flow: column;
+                color: black;
+            }
+            .num{
+                color: white;
+                font-size: 35px;
+                margin: 10px;
+            }
+            img{
+                margin: 10px auto;
+            }
+            .responce h3{
+                margin: 2px auto;
+                text-align: center;
+                color: darkorange;
+
+                font-size: 20px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h3>Weather App</h3>
+        <div class="main">
+            <form>
+                <input type="text"name='cityName' placeholder="enter your place name" id="input">
+                <button><i class="fa-solid fa-magnifying-glass" id="btn"></i></button>
+            </form>
+            <div class="responce">
+                <!-- <img src="https://openweathermap.org/img/wn/01d@2x.png" alt id="images" class="fadeIn2" style="display: block;"> -->
+                <!-- <h1 class="degree">35.86 </h1>
+                <h2>Pune <mark>IN</mark></h2>
+                <div class="row">
+                    <div class="col">
+                        <div>Wind now</div>
+                        <div class="num">4</div>
+                    </div>
+                    <div class="col">
+                        <div>Humidity</div>
+                        <div class="num">27</div>
+                    </div>
+                </div> -->
+
+                
+            </div>
+        </div>
+    </body>
+    <script>
+
+        var form = document.querySelector('form')
+        let responce = document.querySelector('.responce')
+        responce.innerHTML=''
+        // responce.style.disply ='none'
+        form.addEventListener('submit', async (event) =>{
+
+            let cityName= event.target.cityName.value 
+            event.preventDefault()
+            if(cityName==""){
+                responce.innerHTML=''
+                responce.innerHTML += `<h2>enter city name </h2>`
+
+            }
+            else{
+                let fetchdata = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=0f2fb94282ad6a3dbf2387c407b74806&units=metric`)
+                let finalResponce = await fetchdata.json()
+
+                responce.innerHTML='';
+                responce.innerHTML += `<img src="https://openweathermap.org/img/w/${finalResponce.weather[0].icon}.png">
+                <h3>${finalResponce.weather[0].description} </h3>
+                <h1 class="degree">${finalResponce.main.temp} </h1>
+                    <h2>${finalResponce.name} <mark>${finalResponce.sys.country}</mark></h2>
+                    <div class="row">
+                        <div class="col">
+                            <div>Wind now</div>
+                            <div class="num">${finalResponce.wind.speed}</div>
+                        </div>
+                        <div class="col">
+                            <div>Humidity</div>
+                            <div class="num">${finalResponce.main.humidity}</div>
+                        </div>
+                    </div>`
+            }
+
+           
+
+
+            console.log(finalResponce)
+
+        })
+    </script>
+</html>

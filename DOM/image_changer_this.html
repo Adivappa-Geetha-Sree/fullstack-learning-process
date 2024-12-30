@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>image_changer_this</title>
+    </head>
+
+    <style>
+        .main{
+            width: 900px;
+            height: 800px;
+            margin: 20px auto;
+            border: 1px solid black;
+            /* box-sizing: border-box; */
+        }
+        .output{
+            width: 800px;
+            height: 45%;
+            margin: 20px auto;
+            border: 1px solid red;
+            box-sizing: border-box;
+        }
+        .boxes{
+            width: 800px;
+            height: 45%;
+            margin: 20px auto;
+            /* border: 1px solid red; */
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: wrap;
+            gap :15px;
+        }
+        .img{
+            flex-basis: 23%;
+            height: 50%;
+            /* border: 1px solid red; */
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+    </style>
+    <body>
+        <div class="main">
+            <div class="output" ><img src="images/3.jpg" width="100%" height="100%" id="output"></div>
+            <div class="boxes" id="img">
+                <div class=" img"><img src="images/1.jpg" width="184px" onclick="changeimg(this)"></div>
+                <div class=" img"><img src="images/2.jpg" width="184px" onmouseover="changeimg(this)"></div>
+                <div class=" img"><img src="images/3.jpg" width="184px" onmouseover="changeimg(this)"></div>
+                <div class=" img"><img src="images/4.jpg" width="184px" onmouseover="changeimg(this)"></div>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        var info = document.querySelector('#output')
+        function changeimg(changer){
+            imginfo = changer.src
+            info.src = imginfo
+            console.log(info.src)
+
+        }
+        
+
+    </script>
+</html>

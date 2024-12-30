@@ -1,0 +1,25 @@
+@media only screen and (min-width:0px) and (max-width: 426px){
+    header{
+        padding: 0px 20px;
+    }
+    ul{
+        padding: 10px 70px;
+        flex-flow: column;
+        background-color: black;
+        color: red;
+        position:absolute;
+        top: 0%;
+        left: -100%;
+        transition: 0.5s;
+    }
+    nav ul li{
+        color: white;
+    }
+    #bars {
+        display: block !important;
+    }
+    .shownav{
+        left: 0% !important;
+    }
+    
+}

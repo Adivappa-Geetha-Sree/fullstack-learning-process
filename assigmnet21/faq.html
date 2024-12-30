@@ -1,0 +1,164 @@
+<html>
+
+<head>
+    <title>faq Accordion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+        body{
+            background-color: violet;
+        }
+        .main {
+            width: 700px;
+            margin: 30px auto;
+            padding: 20px;
+            box-sizing: border-box;
+            box-shadow: 0px 0px 5px 1px gray;
+            background-color: darkorchid;
+        }
+
+        .headding {
+            margin: auto;
+            padding-left: 65px;
+        }
+        .faq{
+            width: 90%;
+            margin: 10px auto;
+            background-color:mediumslateblue;
+        }
+        .ques{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        .ans{
+            padding: 10px;
+            background-color:skyblue;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="headding">
+            <h1>Frequently Asked Questions (FAQs)</h1>
+        </div>
+        <div class="faqList">
+            <div class="faq">
+                <div class="ques">
+                    <p>What is Full Stack Web Development?</p>
+                    <span>+</span>
+                </div>
+                <div class="ans hide"> 
+                    <p>
+                        Full Stack Development involves working on both 
+                        the front-end (user interface) and back-end (server-side)
+                        aspects of websites or web applications, covering a broad 
+                        spectrum of skills to create fully functional and
+                        dynamic websites
+                    </p>
+                </div>
+            </div>
+            <div class="faq">
+                <div class="ques">
+                    <p>What is Full Stack Web Development?</p>
+                    <span>+</span>
+                </div>
+                <div class="ans hide"> 
+                    <p>
+                        Full Stack Development involves working on both 
+                        the front-end (user interface) and back-end (server-side)
+                        aspects of websites or web applications, covering a broad 
+                        spectrum of skills to create fully functional and
+                        dynamic websites
+                    </p>
+                </div>
+            </div>
+            <div class="faq">
+                <div class="ques">
+                    <p>What is Full Stack Web Development?</p>
+                    <span>+</span>
+                </div>
+                <div class="ans hide"> 
+                    <p>
+                        Full Stack Development involves working on both 
+                        the front-end (user interface) and back-end (server-side)
+                        aspects of websites or web applications, covering a broad 
+                        spectrum of skills to create fully functional and
+                        dynamic websites
+                    </p>
+                </div>
+            </div>
+            <div class="faq">
+                <div class="ques">
+                    <p>What is Full Stack Web Development?</p>
+                    <span>+</span>
+                </div>
+                <div class="ans hide"> 
+                    <p>
+                        Full Stack Development involves working on both 
+                        the front-end (user interface) and back-end (server-side)
+                        aspects of websites or web applications, covering a broad 
+                        spectrum of skills to create fully functional and
+                        dynamic websites
+                    </p>
+                </div>
+            </div>
+            <div class="faq">
+                <div class="ques">
+                    <p>What is Full Stack Web Development?</p>
+                    <span>+</span>
+                </div>
+                <div class="ans hide"> 
+                    <p>
+                        Full Stack Development involves working on both 
+                        the front-end (user interface) and back-end (server-side)
+                        aspects of websites or web applications, covering a broad 
+                        spectrum of skills to create fully functional and
+                        dynamic websites
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+   var ques = document.querySelectorAll(".ques");
+
+    ques.forEach((value,index)=>{
+        value.addEventListener('click', (event) =>{
+            value.nextElementSibling.classList.toggle('hide')
+            // click it shows //hides
+            ques.forEach((e,i)=>{
+                e.nextElementSibling.classList.toggle('hide')
+                //click hides and remaining shows // click shoes and remanin hides
+                if(i !=index){
+                    e.nextElementSibling.classList.add('hide')
+                    //remaning hides // remaning hides
+                    e.children[1].innerHTML='+'
+                    
+                }
+                else{
+                    e.nextElementSibling.classList.toggle('hide')
+                    //click shows // hides
+                    if(e.nextElementSibling.classList.contains('hide')){
+                        e.children[1].innerHTML='+'
+                        // on first click
+                    }
+                    else{
+                        e.children[1].innerHTML='-'
+                        // on second click
+                    }
+                }
+            })
+        })
+    })
+</script>
+
+</html>

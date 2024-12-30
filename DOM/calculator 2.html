@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <title>Calculator</title>
+        <style>
+            *{
+                padding: 0px;
+                margin: auto;
+            }
+            td{
+                font-size: 20px;
+                font-weight: bold;
+                text-align: center;
+            }
+            input{
+                padding: 10px;
+                text-align: right;
+            }
+            button{
+                padding: 20px;
+                background-color: aquamarine;
+                border-radius: 50%;
+                font-size: 20px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <table border="2">
+            <tr>
+                <td><button id="c">CE</button></td>
+                <td colspan='3'><input type="text" id="input"/></td>
+            </tr>
+
+            <tr>
+                <td><button>+</button></td>
+                <td><button>1</button></td>
+                <td><button>4</button></td>
+                <td><button>7</button></td>
+            </tr>
+            <tr>
+                <td><button>-</button></td>
+                <td><button>2</button></td>
+                <td><button>5</button></td>
+                <td><button>8</button></td>
+            </tr>
+            <tr>
+                <td><button>*</button></td>
+                <td><button>3</button></td>
+                <td><button>6</button></td>
+                <td><button>9</button></td>
+            </tr>
+            <tr>
+                <td><button>/</button></td>
+                <td><button>.</button></td>
+                <td><button>0</button></td>
+                <td><button>=</button></td>
+            </tr>
+        </table>
+    </body>
+    <script>
+        var table = document.querySelector('table')
+        var input = document.querySelector('input')
+        // console.log(input)
+        
+        table.addEventListener('click',(event) => {
+            var syb = ['+','-','*','/','.']
+            var div = ['*','/']
+            var targetpoint = event.target
+            if(targetpoint.tagName == 'BUTTON'){
+                let inputOld = input.value
+                let lastChar = inputOld[inputOld.length-1]
+                AfterRemoveLast = inputOld.slice(0,inputOld.length-1)
+
+                if(targetpoint.innerText == 'CE'){
+                    input.value ='';
+                }
+                else if( targetpoint.innerText == '='){
+                    if(syb.includes(lastChar)){
+                        input.value = AfterRemoveLast
+                        input.value= eval(input.value)
+                    }
+                    else if ( div.includes(inputOld[0])){
+                        input.value = inputOld.slice(1,inputOld.length)
+                        input.value= eval(input.value)
+                    }
+                    else{
+                        input.value= eval(input.value)
+                    }
+                }
+                else{
+                   if(syb.includes(targetpoint.innerHTML) && syb.includes(lastChar)){
+                        input.value = AfterRemoveLast+targetpoint.innerHTML
+                   }
+                   else{
+                        input.value =inputOld+targetpoint.innerText
+                   }
+
+                }
+
+            }  
+        })
+    </script>
+</html>
