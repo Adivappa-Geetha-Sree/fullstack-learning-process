@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Translate</title>
+	<style type="text/css">
+		.main{
+			width: 300px;
+			height: 300px;
+			margin: auto;
+/*			display: block;*/
+			overflow: hidden;
+			background: black;
+		}
+		.img1{
+			transition: 2s;
+		}
+		.img2{
+			transform: translate(-300px,-304px);
+			transition: 2s;
+		}
+		.img3{
+			transition: 2s;
+			transform: translate(-600px,-608px);
+		}
+		.main:hover .img1{
+			transform: translate(600px,0px);
+		}
+		.main:hover .img2{
+			transform: translate(300px,-304px);
+		}
+		.main:hover .img3{
+			transform: translate(0px,-608px);
+		}
+
+	</style>
+</head>
+<body>
+	<div class="main">
+		<img src="images/4.jpg" width="300px" height="300px" class="img1">
+		<img src="images/2.jpg" width="300px" height="300px" class="img2">
+		<img src="images/3.jpg" width="300px" height="300px" class="img3">
+	</div>
+</body>
+</html>

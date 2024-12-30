@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Temperature conversion</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    
+</body>
+<script>
+
+    var temperature = Number(prompt("Enter the temperature in degrees celcius"));
+    var fahrenheit = (temperature * (9/5) + 32);
+    var kelvin = (temperature +273.15);
+
+    if ( temperature >= 32 && temperature <= 212) {
+        document.write("with in thrishold limit conversion calculation for Fahrenhit\n");
+        document.write(fahrenheit);
+        console.log( fahrenheit);
+    }
+    else {
+        document.write(" Temperature not in threshold limit, calculate kelvin for temperature conversion \n");
+        document.write(kelvin);
+        console.log( kelvin);    
+    }
+
+</script>
+</html>

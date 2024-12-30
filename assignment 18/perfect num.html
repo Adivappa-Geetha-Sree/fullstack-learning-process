@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>perfet num</title>
+    </head>
+    <body>
+
+    </body>
+    <script>
+       const num = Number(prompt("Enter a number to check the perfect num"))
+       sum=0;
+       for (var i= 1; i<num ; i++){
+            if(num%i==0){
+                sum+=i
+                document.write(sum +'<br/>')
+            }
+       }
+       document.write(sum +'<br/>')
+       if(sum == num){
+            document.write(num+" is a perfect number")
+       }
+       else{
+            document.write(num+" is not a perfect number")
+       }
+       
+    </script>
+</html>

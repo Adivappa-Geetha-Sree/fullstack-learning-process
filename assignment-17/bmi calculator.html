@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>BMI Calculator</title>
+    </head>
+    <body>
+
+    </body>
+    <script>
+        var age = Number(prompt("Enter your age in numbers between 2 t0 120 years"))
+        var gender = prompt('Enter your gender')
+        var height =Number(prompt('Enetr your height in centimeters'))
+        height = height/100
+        var weight = Number(prompt("Enter your weight in kg's "))
+    
+        BMI = weight/(height**2)
+
+        if(age >= 2 && age <=120 ){
+            if(BMI <=18.5){
+                document.write('under weight')
+            }else if (BMI >18.5 && BMI < 25){
+                document.write('Healthy weight')
+            }
+            else if (BMI >=25 && BMI <30){
+                document.write('over weight')
+            }else{
+                document.write('Obesity')
+            }
+        }else{
+            document.write('Enter the correct age must be between 2 to 120 for this calculator limit')
+        }
+    </script>
+</html>

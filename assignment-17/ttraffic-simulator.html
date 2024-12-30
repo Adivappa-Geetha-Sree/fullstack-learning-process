@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Traffic signal color info</title>
+    </hea
+    <body>
+
+    </body>
+    <script>
+       const red = "RED"
+       const yellow = "YELLOW"
+       const green = "GREEN"
+       var input = prompt("enter the input traffic signal colour to know the message")
+       
+       input = input.toUpperCase()
+       if (red == input) {
+        document.write("stop until signal gets green")
+       }else if (yellow == input) {
+        document.write("In fews seconds to get green signal be ready to go")
+       }else if (green == input) {
+        document.write("Let's go ")
+       } else {
+        document.write("Enter the valid input traffic signal colour ")
+       }
+    </script>
+</html>

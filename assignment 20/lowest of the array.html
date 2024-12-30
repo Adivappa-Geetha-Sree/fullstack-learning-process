@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>lowest of numbers</title>
+    </head>
+    <body>
+
+    </body>
+
+    <script>
+
+        let l=[99,77,66,44,88,99,66,25,77,66,55]
+        let k= l[0]
+        let m=l.map((value)=>{
+           if(k>=value){
+             k=value
+           }
+           return k
+        });
+        document.write(k)
+    </script>
+</html>

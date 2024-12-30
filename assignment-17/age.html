@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Age classifier</title>
+    </head>
+    <body>
+
+    </body>
+    <script>
+        var Age = Number(prompt("Enter the your Age"))
+        
+        if(Age >= 0 && Age <=2){
+            document.write("your age is "+ Age+ " and this age group comes under infant classification")
+        }else if (Age>=3 && Age<=5) {
+            document.write("your age is "+ Age+" and this age group comes under toddler classification")
+        }else if (Age>=6 && Age<=12) {
+            document.write("your age is "+ Age+" and this age group comes under child classification")
+        }else if (Age>=13 && Age<=17) {
+            document.write("your age is "+ Age+" and this age group comes under teenager classification")
+        }else if (Age>=18) {
+            document.write("your age is "+ Age+" and this age group comes under adult classification")
+        }else {
+            document.write("Enetr the Age")
+        }
+    </script>
+</html>

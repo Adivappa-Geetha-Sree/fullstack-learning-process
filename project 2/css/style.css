@@ -1,0 +1,379 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+}
+.main{
+/*	background: #F1F1F2;*/
+	background: white;
+	width: 100%;
+	font-family: Roboto, sans-serif;
+}
+.top{
+	width: 100%;
+	background: url(../images/shaadi-north-desktop.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: #F1F1F2;
+    background-size: cover !important;
+}
+.header{
+	width: 70%;
+	margin:auto;
+	padding-top: 30px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: white;
+	font-size: 1rem;
+	font-weight: normal;
+}
+.login{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap:40px;
+	padding-right: 35px;
+}
+.details{
+	width: 100%;
+	margin:auto;
+	padding-top: 30px;
+	color: white;
+	text-align: center;
+	padding-top:301px;
+	background: transparent;
+	font-family: Raleway, sans-serif;
+}
+.looking{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin:20px auto;
+	width: 75%;
+	padding-bottom: 30px;
+	line-height: 30px;
+	font-size: 18px;
+	height: 100px;
+	background: rgba(0, 0, 0, .3);
+}
+.looking button{
+	width: 150px;
+	height: 30px;
+	color: white;
+	background: #53B9D2;
+	margin-top:30px;
+}
+.age{
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+	gap :10px;
+}
+.box{
+	flex-basis: 20%;
+}
+.box select{
+	width: 150px;
+	height: 30px;
+}
+.section1{
+	width: 100%;
+	background: #F1F1F2;
+}
+.banner{
+	width: 70%;
+	height: 200px;
+	border-radius: 30px;
+	background: #201530;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin:40px auto;
+	color: white;
+	line-height: 60px;
+}
+.exclusive{
+	flex-basis: 70%;
+}
+.banner h1{
+	color: #d2b17c !important;
+    font-family: Playfair Display, serif !important;
+    font-size: 34px; 
+    padding-left: 30px;
+}
+.banner ul{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+.img{
+	flex-basis: 30%;
+    border-left: .1px solid #cba764;
+    padding-left: 15px;
+}
+.img img{
+	width: 90%;
+}
+.img button{
+ 	background:#d2b17c ;
+    margin-left: 50px;
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+}
+.someone{
+    font-size: 19px;
+    text-align: center;
+    font-family: Raleway, sans-serif !important;
+    font-weight: 500;
+    padding: 50px 0;
+    width: 70%;
+    margin: auto;
+    color: lightgray;
+}
+.someone h1{
+	color: #ff5a60;
+    text-align: center;
+    font-family: Raleway, sans-serif !important;
+    font-weight: 500;
+    padding: 30px 0;
+}
+.round{
+	display: flex;
+	padding-top: 30px;
+	line-height: 30px;
+}
+.icon i{
+	background: #0194A8;
+	color: #0194A8;
+	font-size: 70px;
+	width: 50px;
+	height: 50px;
+	background: 50%;
+	margin: auto;
+}
+.info h5{
+	color:#0194A8 ;
+	font-size: 24px;
+	padding: 20px 50px;
+}
+.info p{
+	font-size: 16px;
+	line-height: 20px;
+}
+.r1{
+	flex-basis: 32%;
+}
+.section2{
+	width: 100%;
+	background: white;
+
+}
+.section2 h1{
+	color: #ff5a60;
+    text-align: center;
+    font-family: Raleway, sans-serif !important;
+    font-weight: 500;
+    padding: 30px 0;
+}
+
+.r2{
+	width: 70%;
+	margin: 40px auto;
+}
+.r3{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.r3 h2{
+	padding: 10px;
+	color: gray;
+}
+.r3 p{
+	padding :10px;
+	padding-bottom:40px;
+ 	color: lightgray;
+}
+.r3 img {
+	width: 100%;
+}
+.r11{
+	flex-basis: 32%;
+	box-shadow: 0px 0px 3px 1px lightgray;
+}
+.r11:hover{
+	flex-basis: 32%;
+	box-shadow: 0px 0px 15px 5px lightgray;
+}
+.row{
+	width: 100%;
+	height: 100px;
+	background: #FF5A60;
+	color: white;
+	text-align: center;
+}
+.row h3{
+	padding-top: 35px;
+}
+.row button{
+	background: #FF5A60;
+	border: 1px solid white;
+	box-shadow: 0px 0px 5px 1px whitesmoke;
+	margin-left: 30px;
+	margin-top: -10px;
+	width: 150px;
+	height: 40px;
+	color: white;
+}
+.section3{
+	width: 100%;
+	background-color: white;
+}
+.explore{
+	width: 70%;
+	margin: 30px auto;
+}
+.explore h2{
+	padding-left: 10px;
+}
+.explore h3{
+	padding-top: 20px;
+	padding-bottom: 10px;
+	padding-left: 25px;
+}
+.by{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+.choose{
+	flex-basis: 49%;
+	padding: 10px 10px;
+}
+.choose select{
+	width: 100%;
+	height: 50px;
+	color: #10BCD5;
+	padding-left: 20px;
+	border: 0px solid #10BCD5;
+	box-shadow: 0px 0px 15px 1px lightgray;
+	font-size: 18px;
+	font-weight: bold;
+}
+.section4{
+	width: 100%;
+	background-color: white;
+	line-height: 30px;
+	color: gray;
+}
+.Horoscope{
+	width: 70%;
+	margin:30px auto;
+	padding: 20px 10px;
+	background: white;
+	box-shadow: 2px 2px 15px 0px lightgray;
+}
+.Horoscope h2{
+	padding-left: 10px;
+	margin: 10px 10px;
+}
+.Horoscope ul{
+	padding-left: 10px;
+	display: flex;
+/*	justify-content: space-between;*/
+	align-items: center;
+	flex-flow: row wrap;
+}
+.row1{
+	color: #FF5A60;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	gap:20px;
+	background: #F1F1F2;
+	padding: 30px 0px;
+}
+.section5{
+	width: 100%;
+	background: white;
+}
+.row2{
+	width: 70%;
+	padding-top: 350px;
+	margin: auto;
+}
+.row2 p{
+	color: gray;
+	padding: 10px 0px;
+}
+.row2>ul{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	padding-top: 50px;
+	color: #00BCD5;
+}
+.trust{
+	width: 250px;
+	height: 40px;
+	background: #00BCD5;
+	margin:30px auto;
+	padding: 8px 0px 8px 20px;
+	color: white;
+	justify-content: center;
+	align-items: center;
+}
+.ul ul{
+	width: 90%;
+	margin: -30px auto;
+	border-top:1px solid lightgray ;
+	display: flex;
+	gap: 80px;
+	border-bottom:1px solid lightgray ;
+	justify-content: center;
+	align-items: center;
+	color: gray;
+	font-size: 20px;
+	padding: 30px 0px;
+}
+.ul i{
+	color:#ff5a60 ;
+	padding-right: 10px;
+	font-size: 30px;
+	justify-content: center;
+	align-items: center;
+}
+.left {
+	display: flex;
+	padding-top: 50px;
+	color: gray;
+	gap:20px;
+	line-height: 25px;
+	justify-content: space-between;
+	align-items: start;
+	line-height: 30px;
+}
+
+.left ul li:first-child{
+	border-bottom: 1px solid lightgray;
+	padding-bottom: 5px ;
+}
+.bottom{
+	display: flex;
+	padding: 30px 0px;
+	justify-content: space-around;
+	align-items: center;
+	color: dimgray;
+	background:#F1F1F2;
+	font-size: 12px;
+}

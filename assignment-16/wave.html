@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>wave</title>
+	<style type="text/css">
+		*{
+			padding: 0px;
+			margin: 0px;
+		}
+		.btn button{
+			margin: 50px;
+			font-size: 20px;
+			border-radius: 15px;
+			background: yellow;
+			padding: 15px;
+		}
+		.wav1{
+			width: 76px;
+			height: 59px;
+			border-radius: 15px;
+			top:7%;
+			left: 50px;
+			background: pink;
+			transform: scale(0.7);
+			opacity: 0;
+			position: absolute;
+			animation: animi 2s 0s infinite;
+		}
+		.wav2{
+			width: 76px;
+			height: 59px;
+			border-radius: 15px;
+			top:7%;
+			left: 50px;
+			background: pink;
+			transform: scale(0.7);
+			opacity: 0;
+			position: absolute;
+			animation: animi 2s 1s infinite linear;
+		}
+		@keyframes animi{
+			0%{
+				opacity: 0.2;
+				transform: scale(0.8);
+			}
+			50%{
+				opacity: 0.5;
+				transform: scale(1.2);
+			}
+			100%{
+				opacity: 0.2;
+				transform: scale(0.8);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="btn">
+		<button>
+			save
+			<span class="wav1"></span>
+			<span class="wav2"></span>
+		</button>
+	</div>
+</body>
+</html>

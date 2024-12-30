@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Difference of Array</title>
+    </head>
+    <body>
+
+    </body>
+    <script>
+
+        let m= [1,'a', 2,'b',3,'c',4];
+        let n=['c',5,'e',2,'f',7,'a'];
+        let diff1 =m.filter(value => !n.includes(value))
+        let diff2 =n.filter(value => !m.includes(value))
+        document.write(diff1.concat(diff2));
+    </script>
+</html>

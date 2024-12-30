@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>number sort</title>
+    </head>
+    <body>
+
+    </body>
+    <script>
+        var first_num = Number(prompt("Enter the a number"))
+        var Second_num = Number(prompt("Enter the a number"))
+        var third_num = Number(prompt("Enter the a number"))
+        var x
+        if (first_num < Second_num  && first_num < third_num) {
+            first_num = first_num
+            if(Second_num < third_num){
+                document.write( first_num +" "+   Second_num  +" "+  third_num)
+            }else{
+                x=Second_num
+                Second_num=third_num
+                third_num = x
+                document.write( first_num +" "+   Second_num +" "+ third_num)
+            }
+            
+        } else if ( Second_num < first_num && Second_num < third_num ) {
+            x=first_num
+            first_num=Second_num
+            Second_num=x 
+            if(Second_num < third_num){
+                document.write( first_num +" "+  Second_num +" " +third_num)
+            }else{
+                x=Second_num
+                Second_num=third_num
+                third_num = x
+                document.write( first_num +" "+  Second_num  +" "+  third_num)
+            }
+        }else if ( third_num < first_num && third_num < Second_num ) {
+            x=first_num
+            first_num=third_num
+            third_num=x 
+            if(Second_num < third_num){
+                document.write( first_num +" "+   Second_num  +" "+  third_num)
+            }else{
+                x=Second_num
+                Second_num=third_num
+                third_num = x
+                document.write( first_num +" "+   Second_num  +" "+  third_num)
+            }
+        }else{
+            document.write('enter 3 different numbers')
+        }
+    </script>
+</html>

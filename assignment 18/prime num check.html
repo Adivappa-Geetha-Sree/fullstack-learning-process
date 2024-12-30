@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>prime num check</title>
+    </head>
+    <body>
+
+    </body>
+    <script>
+       const num = Number(prompt("Enter a number to check the prime"))
+       let prime = true
+       if(num === 1){
+            document.write('1 is neither prime nor composite number')
+       }
+       else{
+            for (var  i = 2; i< num; i++ ){
+                if(num%i==0){
+                    prime = false;
+                    break;
+                }
+            }
+            if(prime == true){
+                document.write(num+" is prime")
+            }else {
+                document.write(num+" not is prime")
+            }
+       }
+    </script>
+</html>

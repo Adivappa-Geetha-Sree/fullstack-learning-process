@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Grade</title>
+    </head>
+    <body>
+
+    </body>
+    <script>
+        var total_score = Number(prompt("Enter the total score"))
+        
+        if(total_score > 100){
+            document.write("total score be upto 100")
+        }else if (total_score>=90 && total_score<=100) {
+            document.write("grade A")
+        }else if (total_score>=80 && total_score<=89) {
+            document.write("grade B")
+        }else if (total_score>=70 && total_score<=79) {
+            document.write("grade C")
+        }else if (total_score>=60 && total_score<=69) {
+            document.write("grade D")
+        }else if (total_score<69) {
+            document.write("grade F")
+            console.log("graded F")
+        }else {
+            document.write("Enetr the score")
+        }
+    </script>
+</html>

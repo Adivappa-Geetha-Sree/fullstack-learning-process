@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bar-Animation</title>
+	<style type="text/css">
+		*{
+			padding: 0px;
+			margin: 0px;
+		}
+		body{
+			background: black;
+		}
+		.main{
+			width: 500px;
+			margin: 200px auto;
+			display: flex;
+		}
+		.bar{
+			width: 10px;
+			height: 150px;
+			background: orange;
+			margin: 20px;
+			animation: animi 2s 0s infinite linear;
+		}
+		.bar1{
+			width: 10px;
+			height: 150px;
+			background: lightblue;
+			margin: 20px;
+			animation: animi 2s 0.5s infinite linear;
+		}
+		.bar2{
+			width: 10px;
+			height: 150px;
+			background: yellow;
+			margin: 20px;
+			animation: animi 2s 0s infinite linear;
+		}
+		.bar3{
+			width: 10px;
+			height: 150px;
+			background: green;
+			margin: 20px;
+			animation: animi 2s 0.2s infinite linear;
+		}
+		@keyframes animi{
+			0%{
+				transform: scaleY(1.0);
+			}
+			50%{
+				transform: scaleY(1.5);
+			}
+			100%{
+				transform: scaleY(1.0);
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="bar"></div>
+		<div class="bar1"></div>
+		<div class="bar2"></div>
+		<div class="bar3"></div>
+	</div>
+</body>
+</html>
