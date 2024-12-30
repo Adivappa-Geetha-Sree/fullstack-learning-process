@@ -1,0 +1,106 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+.main{
+	width: 750px;
+	height: 1000px;
+	background: white;
+	margin: auto;
+	margin-top: 10px;
+	padding: 70px;
+/*	font-family: arial;*/
+	text-transform: capitalizeS;
+}
+.legend{
+	margin-left: 15px;
+}
+.form{
+	margin-bottom: 30px;
+}
+.userdetails{
+
+}
+.firstname{
+	float: left;
+	padding-left: 10px;
+	padding-top: 30px;
+}
+.enter{
+	width: 300px;
+	margin-top: 15px;
+	padding-top: 5px;
+	text-align: center;
+	padding-bottom: 5px;
+	box-shadow: 1px 1px 1px 0px black;
+	border-radius: 5px;
+}
+.lastname{
+	float: right;
+	padding-left: 10px;
+	padding-top: 30px;
+	margin-right: 50px;
+}
+.entername{
+	width: 300px;
+	margin-top: 15px;
+	margin-right: ;
+	padding-top: 5px;
+	text-align: center;
+	padding-bottom: 5px;
+	box-shadow: 1px 1px 1px 0px black;
+	border-radius: 5px;
+}
+.gender{
+	float: left;
+}
+.g1{
+	width: 700px;
+	height: 40px;
+	border: 1px solid black;
+	text-align: left;
+	margin-top: 20px;
+	box-shadow: 1px 1px 1px 0px black;
+	border-radius: 5px;
+}
+.g2{
+	margin-left: 60px;
+	margin-top: 15px;
+	border-radius: 5px;
+
+}
+.a1{
+	width: 700px;
+	height: 70px;
+	border: 1px solid black;
+	text-align: center;
+	margin-top: 20px;
+	box-shadow: 1px 1px 1px 0px black;
+	border-radius: 5px;
+}
+.g3{
+	margin-left: 30px;
+	margin-top: 15px;
+	border-radius: 5px;
+
+
+}
+.g4{
+	width: 700px;
+	height: 40px;
+	border: 1px solid black;
+	text-align: left;
+	margin-top: 20px;
+	padding-top: 10px;
+	box-shadow: 1px 1px 1px 0px black;
+	border-radius: 5px;
+}
+.botton{
+	color: white;
+	background-color: #9b59b6;
+	padding: 20px 30px;
+	margin-right: 200px;
+	margin-left: 30px;
+	margin-bottom: 8px;
+	border-radius: 5px;
+}
